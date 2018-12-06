@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content='text/html; charset=utf-8'>
+    <link rel="stylesheet" href="./3-5.css" type="text/css">
+    <title><%= title %></title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><%= title %></h1>
+    </header>
+    <div role="main">
+        <p><%= content %></p>
+        <p>
+          <table style="width:400px;">
+            <tr>
+              <th>伝言です！</th>
+            </tr>
+            <tr>
+              <td><%= data.undefinedmsg %></td>
+            </tr>
+          </table>
+          <p>
+            yout last message:<%= cookie_data %>
+          </p>
+          <form action="/" method="post">
+            MESSAGE<input type="text" name="msg" value="">
+            <input type="submit" name="" value="送信">
+          </form>
+        </p>
+    </div>
+
+  </body>
+</html>
