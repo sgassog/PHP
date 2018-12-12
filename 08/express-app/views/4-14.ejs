@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="js" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="content-type" >
+    <title><%= title %></title>
+    <link rel="stylesheet" href="./4-15.css">
+  </head>
+  <body>
+    <header>
+      <h1><%= title %></h1>
+    </header>
+    <div role="main">
+      <p><%- content %></p>
+        <p>
+          <table style="width:85%;">
+            <% for(var key in data) { %>
+                <%-include('4-13', {key:key, val:data[key]}) %>
+            <% } %>
+          </table>
+        </p>
+    </div>
+  </body>
+</html>
